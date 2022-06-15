@@ -1,0 +1,8 @@
+diff a/src/views/Cementerio.vue b/src/views/Cementerio.vue	(rejected hunks)
+@@ -1,5 +1,5 @@
+ <template>
+- <v-container>
++  <v-container>
+ 
+ 
+     <v-row style="margin-top: 5px">

@@ -10,6 +10,7 @@
         <v-btn color="primary"><v-icon class="fa fa-plus" ></v-icon> Agregar Parcela</v-btn>
       </v-col>
 
+
     </v-row>
    <v-row>
        <template>
@@ -94,21 +95,21 @@
       </v-col>
     </v-row>
   </v-container>
-</template>
+</template>-->
 
-<script>
+ <script>
 export default {
   data: () => {
     return {
       search: "",
       headers: [
-        { text: "Tipo", value: "tipo",width: "5%"  },
-        { text: "Mannzana", value: "manzana" ,width: "5%"},
-        { text: "Lote", value: "lote" ,width: "5%"},
-        { text: "Parcela", value: "parcela",width: "5%" },
-        { text: "Nivel", value: "nivel" ,width: "5%"},
-       // { text: "Nro Contrato", value: "nro_contrato",width: "5%" },
-        { text: "Titular", value: "nom_titular1",width: "25%" } ,
+        { text: "Tipo", value: "tipo", width: "5%" },
+        { text: "Manzana", value: "manzana", width: "5%" },
+        { text: "Lote", value: "lote", width: "5%" },
+        { text: "Parcela", value: "parcela", width: "5%" },
+        { text: "Nivel", value: "nivel", width: "5%" },
+        // { text: "Nro Contrato", value: "nro_contrato",width: "5%" },
+        { text: "Titular", value: "nom_titular1", width: "25%" },
         { text: "", value: "nro_contrato" }
 
       ],
@@ -125,7 +126,9 @@ export default {
     }
   },
 };
-</script>
+</script> 
+
+
 
 <style>
 #app {
@@ -136,6 +139,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 .v-navigation-drawer--bottom.v-navigation-drawer--is-mobile {
   max-height: none;
   top: auto;
