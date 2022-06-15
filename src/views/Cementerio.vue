@@ -47,7 +47,6 @@
               <v-layout row wrap>
                 <v-flex md4>
                   &nbsp;
-                  &nbsp;
                 </v-flex>
                 <v-flex md2>
                   <v-text-field v-model="search" label="Tipo" single-line hide-details @click="setFocus">
