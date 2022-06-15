@@ -47,7 +47,7 @@
                   &nbsp;
                 </v-flex>
                 <v-flex md2>
-                  <v-text-field v-model="search" label="Tipo" single-line hide-details>
+                  <v-text-field v-model="search" label="Tipo" single-line hide-details @click="setFocus">
                   </v-text-field>
                 </v-flex>
                 <v-flex md2>
@@ -114,6 +114,11 @@ export default {
       desserts: null,
       closeOnContentClick: false,
     };
+  },
+  methods: {
+    setFocus() {
+      this.form.Tipo.focus()// don't  work
+    },
   },
   components: {},
   async mounted() {
