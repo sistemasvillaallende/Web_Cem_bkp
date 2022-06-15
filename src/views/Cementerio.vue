@@ -1,5 +1,5 @@
 <template>
- <v-container>
+  <v-container>
 
 
     <v-row style="margin-top: 5px">
@@ -7,48 +7,33 @@
         <h2>CEMENTERIO PARQUE</h2>
       </v-col>
       <v-col cols="4" style="text-align: right">
-        <v-btn color="primary"><v-icon class="fa fa-plus" ></v-icon> Agregar Parcela</v-btn>
+        <v-btn color="primary">
+          <v-icon class="fa fa-plus"></v-icon> Agregar Parcela
+        </v-btn>
       </v-col>
 
     </v-row>
-   <v-row>
-       <template>
-  <v-form
-    ref="form"
-    v-model="valid"
-    lazy-validation
-  >
-     <div>
-    <v-text-field
-      label="Main input"
-      :rules="rules"
-      hide-details="auto"
-    ></v-text-field>
-    <v-text-field label="Another input"></v-text-field>
-  </div>
+    <v-row>
+      <template>
+        <v-form ref="form" v-model="valid" lazy-validation>
+          <div>
+            <v-text-field label="Main input" :rules="rules" hide-details="auto"></v-text-field>
+            <v-text-field label="Another input"></v-text-field>
+          </div>
 
 
 
-    <v-btn
-      :disabled="!valid"
-      color="success"
-      class="mr-4"
-      @click="validate"
-    >
-      Guardar
-    </v-btn>
+          <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+            Guardar
+          </v-btn>
 
-    <v-btn
-      color="error"
-      class="mr-4"
-      @click="reset"
-    >
-      Cancelar
-    </v-btn>
+          <v-btn color="error" class="mr-4" @click="reset">
+            Cancelar
+          </v-btn>
 
-  </v-form>
-</template>
-   </v-row>
+        </v-form>
+      </template>
+    </v-row>
 
     <v-row style="margin-top: 25px">
       <v-col cols="12">
@@ -57,13 +42,27 @@
             <v-card-title>
               Parcelas del Cementerio
               <v-spacer></v-spacer>
-              <v-text-field
-                v-model="search"
-                append-icon="mdi-magnify"
-                label="Search"
-                single-line
-                hide-details
-              ></v-text-field>
+              <v-layout row wrap>
+                <v-flex md4>
+                  &nbsp;
+                </v-flex>
+                <v-flex md2>
+                  <v-text-field v-model="search" label="Tipo" single-line hide-details>
+                  </v-text-field>
+                </v-flex>
+                <v-flex md2>
+                  <v-text-field v-model="search" label="Manzana" single-line hide-details>
+                  </v-text-field>
+                </v-flex>
+                <v-flex md2>
+                  <v-text-field v-model="search" label="Lote" single-line hide-details>
+                  </v-text-field>
+                </v-flex>
+                <v-flex md2>
+                  <v-text-field v-model="search" append-icon="mdi-magnify" label="Nivel" single-line hide-details>
+                  </v-text-field>
+                </v-flex>
+              </v-layout>
             </v-card-title>
             <v-data-table :headers="headers" :items="desserts" :search="search">
               <template v-slot:[`item.nro_contrato`]="{ item }">
@@ -76,7 +75,7 @@
 
                   <v-list>
                     <v-list-item>
-                      <v-btn :href="'/Editbadec' ">
+                      <v-btn :href="'/Editbadec'">
                         <v-icon small> mdi-pencil </v-icon> Editar
                       </v-btn>
                     </v-list-item>
@@ -102,13 +101,13 @@ export default {
     return {
       search: "",
       headers: [
-        { text: "Tipo", value: "tipo",width: "5%"  },
-        { text: "Mannzana", value: "manzana" ,width: "5%"},
-        { text: "Lote", value: "lote" ,width: "5%"},
-        { text: "Parcela", value: "parcela",width: "5%" },
-        { text: "Nivel", value: "nivel" ,width: "5%"},
-       // { text: "Nro Contrato", value: "nro_contrato",width: "5%" },
-        { text: "Titular", value: "nom_titular1",width: "25%" } ,
+        { text: "Tipo", value: "tipo", width: "5%" },
+        { text: "Mannzana", value: "manzana", width: "5%" },
+        { text: "Lote", value: "lote", width: "5%" },
+        { text: "Parcela", value: "parcela", width: "5%" },
+        { text: "Nivel", value: "nivel", width: "5%" },
+        // { text: "Nro Contrato", value: "nro_contrato",width: "5%" },
+        { text: "Titular", value: "nom_titular1", width: "25%" },
         { text: "", value: "nro_contrato" }
 
       ],
@@ -136,6 +135,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 .v-navigation-drawer--bottom.v-navigation-drawer--is-mobile {
   max-height: none;
   top: auto;
