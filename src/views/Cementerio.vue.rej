@@ -1,0 +1,24 @@
+diff a/src/views/Cementerio.vue b/src/views/Cementerio.vue	(rejected hunks)
+@@ -46,18 +46,19 @@
+               <v-spacer></v-spacer>
+               <v-layout row wrap>
+                 <v-flex md4>
++
+                   &nbsp;
+                 </v-flex>
+                 <v-flex md2>
+-                  <v-text-field v-model="search" label="Tipo" single-line hide-details @click="setFocus">
++                  <v-text-field label="Zona" single-line hide-details autofocus placeholder="Ingrese Zona.">
+                   </v-text-field>
+                 </v-flex>
+                 <v-flex md2>
+-                  <v-text-field v-model="search" label="Manzana" single-line hide-details>
++                  <v-text-field label="Manzana" single-line hide-details>
+                   </v-text-field>
+                 </v-flex>
+                 <v-flex md2>
+-                  <v-text-field v-model="search" label="Lote" single-line hide-details>
++                  <v-text-field label="Lote" single-line hide-details>
+                   </v-text-field>
+                 </v-flex>
+                 <v-flex md2>

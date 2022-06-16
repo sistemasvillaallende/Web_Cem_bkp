@@ -7,7 +7,6 @@
         <h2>CEMENTERIO PARQUE</h2>
       </v-col>
       <v-col cols="4" style="text-align: right">
-        <v-btn color="primary">
           <v-icon class="fa fa-plus"></v-icon> Agregar Parcela
         </v-btn>
       </v-col>

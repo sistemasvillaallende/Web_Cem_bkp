@@ -21,7 +21,7 @@
             <v-text-field label="Another input"></v-text-field>
           </div>
 
-
+    
 
           <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
             Guardar
@@ -35,7 +35,7 @@
       </template>
     </v-row>
 
-
+    
 
     <v-row style="margin-top: 25px">
       <v-col cols="12">
@@ -46,19 +46,18 @@
               <v-spacer></v-spacer>
               <v-layout row wrap>
                 <v-flex md4>
-
                   &nbsp;
                 </v-flex>
                 <v-flex md2>
-                  <v-text-field label="Zona" single-line hide-details autofocus placeholder="Ingrese Zona.">
+                  <v-text-field v-model="search" label="Tipo" single-line hide-details @click="setFocus">
                   </v-text-field>
                 </v-flex>
                 <v-flex md2>
-                  <v-text-field label="Manzana" single-line hide-details>
+                  <v-text-field v-model="search" label="Manzana" single-line hide-details>
                   </v-text-field>
                 </v-flex>
                 <v-flex md2>
-                  <v-text-field label="Lote" single-line hide-details>
+                  <v-text-field v-model="search" label="Lote" single-line hide-details>
                   </v-text-field>
                 </v-flex>
                 <v-flex md2>
